@@ -113,7 +113,7 @@ export default function NodeMap() {
         onEdgesChange={onEdgesChange}
         nodeTypes={nodeTypes}
         fitView
-        className="bg-transparent"
+        className="bg-transparent h-full w-full"
       >
         <Background color="rgba(255,255,255,0.03)" gap={20} size={1} />
         <Controls className="!bg-slate-900/80 !border-ghost-border !fill-slate-400 !rounded-lg !m-4" />
