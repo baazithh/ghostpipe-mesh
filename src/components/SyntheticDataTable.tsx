@@ -69,7 +69,7 @@ export default function SyntheticDataTable() {
             </tr>
           </thead>
           <tbody>
-            <AnimatePresence mode="wait">
+            <AnimatePresence>
               {loading ? (
                 <motion.tr
                   key="skeleton"
