@@ -46,6 +46,8 @@ const nodeTypes = {
   meshNode: MeshNode,
 };
 
+const edgeTypes = {};
+
 const initialNodes: Node[] = [
   { 
     id: '1', 
@@ -83,10 +85,6 @@ export default function NodeMap() {
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
 
-  const nodeTypesMemo = useMemo(() => ({
-    meshNode: MeshNode,
-  }), []);
-
   return (
     <GlassCard className="h-[400px] flex flex-col p-0 overflow-hidden relative group">
       <div className="absolute top-6 left-8 z-10">
@@ -115,7 +113,8 @@ export default function NodeMap() {
         edges={edges}
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
-        nodeTypes={nodeTypesMemo}
+        nodeTypes={nodeTypes}
+        edgeTypes={edgeTypes}
         fitView
         className="bg-transparent h-full w-full"
       >
